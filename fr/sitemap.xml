@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/fr/categories.html</loc>
+    <loc>https://genesys-samples.github.io/fr/categories.html</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories.html"
+                href="https://genesys-samples.github.io/categories.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/categories.html"
+                href="https://genesys-samples.github.io/fr/categories.html"
                 />
   </url><url>
-    <loc>/fr/</loc>
+    <loc>https://genesys-samples.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://genesys-samples.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/"
+                href="https://genesys-samples.github.io/fr/"
                 />
   </url><url>
-    <loc>/fr/tags.html</loc>
+    <loc>https://genesys-samples.github.io/fr/tags.html</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags.html"
+                href="https://genesys-samples.github.io/tags.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/fr/tags.html"
+                href="https://genesys-samples.github.io/fr/tags.html"
                 />
   </url>
 </urlset>

@@ -1,55 +1,83 @@
 [
 {
-	"uri": "/",
-	"title": "Genesys Workshop",
-	"tags": [],
-	"description": "",
-	"content": "Genesys Workshop Welcome In this workshop you will learn to apply your foundational knowledge of Genesys and master example use cases that demonstrate Experience as a Service.\nLearning Objectives  Setup and configure your environment. Creating users and groups. Configure security.  "
-},
-{
-	"uri": "/020-getting-started/10_first.html",
-	"title": "First Lesson",
-	"tags": [],
-	"description": "",
-	"content": "Configure Workshop   Step one\n  Step two\n  Step three\n  "
-},
-{
-	"uri": "/010-introduction.html",
+	"uri": "https://genesys-samples.github.io/010-introduction.html",
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Genesys Workshop Series Introduction Welcome In this workshop, you will learn\u0026hellip;\n This workshop is focused on things one, two and three.\n Learning Objectives  Master this Configure that Integrate this  "
+	"content": "Automation with CX as Code Overview In this workshop, we will cover 2 primary segments\n Overview session on CX as Code: We\u0026rsquo;ll be walking through the fundamentals of CX as Code, Terraform, Resources, Data Source structures and pre-requisites.\n  Guided Workshop: The second half of the workshop will be a guided walkthrough where you will create a basic terraform file structure an execute your first CX as Code resource\n Learning Objectives  Define and differentiate CX as Code and Terraform Understand basic CX as Code Resource and Data source Structures Install and access pre-requisites Construct your TF files and execute your first resource  Resources CX as Code Developer Blog\nTerraform\nGenesys Terraform Github Repository\nTerraform CLI\nVisual Studio Code\n"
 },
 {
-	"uri": "/020-getting-started.html",
-	"title": "Getting Started",
+	"uri": "https://genesys-samples.github.io/020-cx-as-code-and-terraform.html",
+	"title": "CX as Code and Terraform",
 	"tags": [],
 	"description": "",
-	"content": "Getting Started  First Lesson   Second Lesson   "
+	"content": "Defining and differentiating CX As Code and Terraform Index  CX As Code   Terraform   Use Cases   "
 },
 {
-	"uri": "/020-getting-started/20_second.html",
-	"title": "Second Lesson",
+	"uri": "https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html",
+	"title": "CX As Code",
 	"tags": [],
 	"description": "",
-	"content": "Advanced Lesson   Step one\n  Step two\n  Step three\n  "
+	"content": "What is CX as Code? CX as Code is a configuration tool that allows you to define Genesys Cloud Objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across multiple Genesys Cloud CX organizations\n CX as Code Resources CX as Code resources are used to create configuration components using various Input fields as well as data sources (such as division_ID or Queue_Flow_ID)\n Below is an example of a resource requiring various inputs (name, description) and dependancies (queue_flow_id and whisper_prompt_id)\n CX as Code Data Sources Data Sources are simelar to GET Requests, allowing you to GET refrencable information that exists on the platform to be refrenced within resources by component name as shown below\n In the data source below (see image), we are retrieving the welcome greeting by its name \u0026ldquo;Welcome_Greeting\u0026rdquo;, this can be then refrenced in the previous resource example to populate the whisper prompt for the queue  Auth Access Requirements Within resources you will see a defined list of API access requirements for the auth client you\u0026rsquo;ve constructted which will outline the permissions your auth client requires to execute the sepcific resource you are reviewing\n"
 },
 {
-	"uri": "/090-conclution.html",
+	"uri": "https://genesys-samples.github.io/030-using-cx-as-code/10_gitting-started-haha.html",
+	"title": "Gitting Started... haha",
+	"tags": [],
+	"description": "",
+	"content": "Create a local file repository This is fancy talk for creating a folder locally on your machine that will be used to store code and development projects.​\nIt is best practice to not include spaces in the name of this folder, or files in general while developing\nOpen this folder within VSCode You can either right click within this folder and select “Open with code” or navigate to it from VSCode Directly\nCreate an OAuth Client Generate a client credentials auth client in the Genesys Cloud admin panel.​\nThe roles tab is where you specify the permissions this token will have.\n"
+},
+{
+	"uri": "https://genesys-samples.github.io/030-using-cx-as-code/20_buidlingyourcodebase.html",
+	"title": "Building Your Code Base",
+	"tags": [],
+	"description": "",
+	"content": "Setting up your file structure Create two files in VS code: 1. main.tf and 2. variables.tf\nIn the main.tf file, copy and paste the following:\nterraform { required_version = \u0026#34;~\u0026gt; 1.1.6\u0026#34; required_providers { genesyscloud = { source = \u0026#34;mypurecloud/genesyscloud\u0026#34; version = \u0026#34;~\u0026gt; 1.0.0\u0026#34; } } } provider \u0026#34;genesyscloud\u0026#34; { oauthclient_id = var.oauthclient_id oauthclient_secret = var.oauthclient_secret aws_region = var.aws_region } resource \u0026#34;genesyscloud_routing_skill\u0026#34; \u0026#34;test_skill\u0026#34; { name = \u0026#34;Test Skill\u0026#34; } In the variables.tf file, copy and paste the following except replace what\u0026rsquo;s in parentheses with the information from your oAuth you created in the previous step. You also will need to replace the AWS region with the region that your account is in.\nvariable \u0026#34;oauthclient_id\u0026#34; { default = \u0026#34;OAUTH ID HERE\u0026#34; } variable \u0026#34;oauthclient_secret\u0026#34; { default = \u0026#34;OAUTH SECRET HERE\u0026#34; } variable \u0026#34;aws_region\u0026#34; { default = \u0026#34;MY AWS REGION\u0026#34; } Running the Terraform Commands Open up a terminal in Visual Studio Code.\nIn your terminal, you will run a series of three terraform commands.\nThe first that you will need to run is:\nterraform init This should initialize terraform in your local repository allowing you to execute terraform commands.\nThe next command you will run is:\nterraform plan This will give you a break down of what will be created, modified, or destroyed by running terraform apply.\nIf everything looks good with the plan, you can probably guess what we\u0026rsquo;re going to run next:\nterraform apply You will need to confirm that you indeed want to make the changes so say \u0026ldquo;yes\u0026rdquo;.\nAt this point, you should be able to go into the org and see that your changes have been made! Congrats, you\u0026rsquo;ve successfully created a skill using CX as Code.\n"
+},
+{
+	"uri": "https://genesys-samples.github.io/020-cx-as-code-and-terraform/20_second.html",
+	"title": "Terraform",
+	"tags": [],
+	"description": "",
+	"content": "What is Terraform Terraform is a tool for building and managing infrastructures. It takes in configuration files, which specify how the resources should be set up and configured. Terraform will generate an execution plan describing what needs to be done to reach the desired state. Terraform then applies the plan and builds the specified infrastructure. When new changes are made to the configuration files, Terraform is able to detect differences and generate incremental execution plans for changes.​\n"
+},
+{
+	"uri": "https://genesys-samples.github.io/030-using-cx-as-code.html",
+	"title": "Using CX as Code",
+	"tags": [],
+	"description": "",
+	"content": "Prerequisites    Access Install     Genesys Cloud (Admin Access) GitBash   Genesys Cloud developer center Visual Studio Code   GitHub (Create account) Terraform CLI    Topics "
+},
+{
+	"uri": "https://genesys-samples.github.io/020-cx-as-code-and-terraform/30_third.html",
+	"title": "Use Cases",
+	"tags": [],
+	"description": "",
+	"content": "Why use CX as Code? You may be looking at some of the resource articles, or have skipped ahead a few pages in the workshop and asked yourself \u0026ldquo;Why would I go through all of this to simply construct a skill?\u0026rdquo;\nWhile this workshop is intended to provide a foundational knowledge of CX as Code, the scope of CX as Code is well beyond spending 4 hours building a skill.\nThe Genesys Cloud administrative functions are designed to be incredibly simple, but\nMulti-Org Configuration  CX as Code allows you to build once and deploy everywhere, accelerating multi-org deployments or configuration changes  CX as Code allows for fast and easy deployment of new objects or migration of existing configuration such as queues, users, skills etc.\nCX as Code provides alleviates the need for administrators to worry about which configuration objects have what dependancies; Terraform will reference the requested resources and data sources to map out the logical order of how things need to be constructed based upon the required dependancies.\nThe ability to bulk export entire configurationcleae\n"
+},
+{
+	"uri": "https://genesys-samples.github.io/090-conclution.html",
 	"title": "Conclusion",
 	"tags": [],
 	"description": "",
 	"content": "Conclusion Congrats! You\u0026rsquo;ve reached the end of today\u0026rsquo;s workshop. Please fill out today\u0026rsquo;s feedback form via this TODO\n "
 },
 {
-	"uri": "/categories.html",
+	"uri": "https://genesys-samples.github.io/",
+	"title": "Genesys CX as Code Workshop",
+	"tags": [],
+	"description": "",
+	"content": "Genesys CX as Code Workshop Introduction The goal of the workshop is to introduce the newest tool to the Genesys Cloud developer ecosystem. In this workshop, we will be configuring and executing resources sourced from the Genesys Github repository.\n"
+},
+{
+	"uri": "https://genesys-samples.github.io/categories.html",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags.html",
+	"uri": "https://genesys-samples.github.io/tags.html",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

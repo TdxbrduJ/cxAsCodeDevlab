@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Using CX as Code on Documentation for Hugo Learn Theme</title>
+    <link>https://genesys-samples.github.io/030-using-cx-as-code.html</link>
+    <description>Recent content in Using CX as Code on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://genesys-samples.github.io/030-using-cx-as-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitting Started... haha</title>
+      <link>https://genesys-samples.github.io/030-using-cx-as-code/10_gitting-started-haha.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://genesys-samples.github.io/030-using-cx-as-code/10_gitting-started-haha.html</guid>
+      <description>Create a local file repository This is fancy talk for creating a folder locally on your machine that will be used to store code and development projects.​
+It is best practice to not include spaces in the name of this folder, or files in general while developing
+Open this folder within VSCode You can either right click within this folder and select “Open with code” or navigate to it from VSCode Directly</description>
+    </item>
+    
+    <item>
+      <title>Building Your Code Base</title>
+      <link>https://genesys-samples.github.io/030-using-cx-as-code/20_buidlingyourcodebase.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://genesys-samples.github.io/030-using-cx-as-code/20_buidlingyourcodebase.html</guid>
+      <description>Setting up your file structure Create two files in VS code: 1. main.tf and 2. variables.tf
+In the main.tf file, copy and paste the following:
+terraform { required_version = &amp;#34;~&amp;gt; 1.1.6&amp;#34; required_providers { genesyscloud = { source = &amp;#34;mypurecloud/genesyscloud&amp;#34; version = &amp;#34;~&amp;gt; 1.0.0&amp;#34; } } } provider &amp;#34;genesyscloud&amp;#34; { oauthclient_id = var.oauthclient_id oauthclient_secret = var.oauthclient_secret aws_region = var.aws_region } resource &amp;#34;genesyscloud_routing_skill&amp;#34; &amp;#34;test_skill&amp;#34; { name = &amp;#34;Test Skill&amp;#34; } In the variables.</description>
+    </item>
+    
+  </channel>
+</rss>
