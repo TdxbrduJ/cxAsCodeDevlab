@@ -11,22 +11,22 @@
     <title>Building Your Code Base :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="../css/nucleus.css?1651770120" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1651770120" rel="stylesheet">
-    <link href="../css/hybrid.css?1651770120" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1651770120" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1651770120" rel="stylesheet">
-    <link href="../css/auto-complete.css?1651770120" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1651770120" rel="stylesheet">
-    <link href="../css/theme.css?1651770120" rel="stylesheet">
-    <link href="../css/tabs.css?1651770120" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1651770120" rel="stylesheet">
+    <link href="../css/nucleus.css?1651846649" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1651846649" rel="stylesheet">
+    <link href="../css/hybrid.css?1651846649" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1651846649" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1651846649" rel="stylesheet">
+    <link href="../css/auto-complete.css?1651846649" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1651846649" rel="stylesheet">
+    <link href="../css/theme.css?1651846649" rel="stylesheet">
+    <link href="../css/tabs.css?1651846649" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1651846649" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1651770120" rel="stylesheet">
+    <link href="../css/theme-mine.css?1651846649" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1651770120"></script>
+    <script src="../js/jquery-3.3.1.min.js?1651846649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1651770120"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1651770120"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1651846649"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1651846649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/genesys-samples.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1651770120"></script>
+<script type="text/javascript" src="../js/search.js?1651846649"></script>
 
     
   </div>
@@ -458,8 +458,23 @@
 
 
 <h2 id="setting-up-your-file-structure">Setting up your file structure</h2>
-<p>Create two files in VS code: 1. main.tf and 2. variables.tf</p>
-<p>In the main.tf file, copy and paste the following:</p>
+<p>Create two files in VS code:</p>
+<ol>
+<li>Variables.tf</li>
+<li>Main.tf</li>
+</ol>
+<p>Copy the code snippit below and paste it into your Variables.tf file. Once copied over you will need to enter your Oauth client ID and secret with the information from the Oauth client you created in the previous step. You will also need to replace the <a href="https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/">AWS Region</a> (found in the AWS region name column in the linked article) with the AWS region your Genesys Cloud org resides in</p>
+<pre tabindex="0"><code>variable &#34;oauthclient_id&#34; {
+  default = &#34;OAUTH ID HERE&#34;
+}
+variable &#34;oauthclient_secret&#34; {
+  default = &#34;OAUTH SECRET HERE&#34;
+}
+
+variable &#34;aws_region&#34; {
+  default = &#34;MY AWS REGION&#34;
+}
+</code></pre><p>Copy the code snippit below and paste it into your Main.tf file. This code snip contains your Oauth reference, providers and a resource to construct a routing skill</p>
 <pre tabindex="0"><code>terraform {
   required_version = &#34;~&gt; 1.1.6&#34;
   required_providers {
@@ -478,17 +493,6 @@ provider &#34;genesyscloud&#34; {
 
 resource &#34;genesyscloud_routing_skill&#34; &#34;test_skill&#34; {
   name = &#34;Test Skill&#34;
-}
-</code></pre><p>In the variables.tf file, copy and paste the following except replace what&rsquo;s in parentheses with the information from your oAuth you created in the previous step. You also will need to replace the AWS region with the region that your account is in.</p>
-<pre tabindex="0"><code>variable &#34;oauthclient_id&#34; {
-  default = &#34;OAUTH ID HERE&#34;
-}
-variable &#34;oauthclient_secret&#34; {
-  default = &#34;OAUTH SECRET HERE&#34;
-}
-
-variable &#34;aws_region&#34; {
-  default = &#34;MY AWS REGION&#34;
 }
 </code></pre><h2 id="running-the-terraform-commands">Running the Terraform Commands</h2>
 <p>Open up a terminal in Visual Studio Code.</p>
@@ -711,19 +715,19 @@ In your terminal, you will run a series of three terraform commands.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1651770120"></script>
-    <script src="../js/perfect-scrollbar.min.js?1651770120"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1651770120"></script>
-    <script src="../js/jquery.sticky.js?1651770120"></script>
-    <script src="../js/featherlight.min.js?1651770120"></script>
-    <script src="../js/highlight.pack.js?1651770120"></script>
+    <script src="../js/clipboard.min.js?1651846649"></script>
+    <script src="../js/perfect-scrollbar.min.js?1651846649"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1651846649"></script>
+    <script src="../js/jquery.sticky.js?1651846649"></script>
+    <script src="../js/featherlight.min.js?1651846649"></script>
+    <script src="../js/highlight.pack.js?1651846649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1651770120"></script>
-    <script src="../js/learn.js?1651770120"></script>
-    <script src="../js/hugo-learn.js?1651770120"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1651846649"></script>
+    <script src="../js/learn.js?1651846649"></script>
+    <script src="../js/hugo-learn.js?1651846649"></script>
     
         
-            <script src="../mermaid/mermaid.js?1651770120"></script>
+            <script src="../mermaid/mermaid.js?1651846649"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

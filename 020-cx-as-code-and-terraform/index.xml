@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html</guid>
-      <description>What is CX as Code? CX as Code is a configuration tool that allows you to define Genesys Cloud Objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across multiple Genesys Cloud CX organizations
- CX as Code Resources CX as Code resources are used to create configuration components using various Input fields as well as data sources (such as division_ID or Queue_Flow_ID)</description>
+      <description>What is CX as Code? CX as Code is a configuration tool that allows you to define Genesys Cloud objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across a single or multiple Genesys Cloud CX organizations
+ CX as Code Resources CX as Code resources are used to create configuration components using inputs (such as the name of a skill), however; some resources have numerous dependencies, or configuration objects that must exist or be created in tandem for the resource to be created</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       
       <guid>https://genesys-samples.github.io/020-cx-as-code-and-terraform/30_third.html</guid>
       <description>Why use CX as Code? You may be looking at some of the resource articles, or have skipped ahead a few pages in the workshop and asked yourself &amp;ldquo;Why would I go through all of this to simply construct a skill?&amp;rdquo;
-While this workshop is intended to provide a foundational knowledge of CX as Code, the scope of CX as Code is well beyond spending 4 hours building a skill.</description>
+While this workshop is intended to provide a foundational knowledge of CX as Code, the scope of CX as Code is well beyond spending 4 hours building a skill</description>
     </item>
     
   </channel>

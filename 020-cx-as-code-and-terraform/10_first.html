@@ -11,22 +11,22 @@
     <title>CX As Code :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="../css/nucleus.css?1651770120" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1651770120" rel="stylesheet">
-    <link href="../css/hybrid.css?1651770120" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1651770120" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1651770120" rel="stylesheet">
-    <link href="../css/auto-complete.css?1651770120" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1651770120" rel="stylesheet">
-    <link href="../css/theme.css?1651770120" rel="stylesheet">
-    <link href="../css/tabs.css?1651770120" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1651770120" rel="stylesheet">
+    <link href="../css/nucleus.css?1651846649" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1651846649" rel="stylesheet">
+    <link href="../css/hybrid.css?1651846649" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1651846649" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1651846649" rel="stylesheet">
+    <link href="../css/auto-complete.css?1651846649" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1651846649" rel="stylesheet">
+    <link href="../css/theme.css?1651846649" rel="stylesheet">
+    <link href="../css/tabs.css?1651846649" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1651846649" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1651770120" rel="stylesheet">
+    <link href="../css/theme-mine.css?1651846649" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1651770120"></script>
+    <script src="../js/jquery-3.3.1.min.js?1651846649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1651770120"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1651770120"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1651846649"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1651846649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/genesys-samples.github.io\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1651770120"></script>
+<script type="text/javascript" src="../js/search.js?1651846649"></script>
 
     
   </div>
@@ -461,23 +461,23 @@
 
 
 <h2 id="what-is-cx-as-code">What is CX as Code?</h2>
-<p>CX as Code is a configuration tool that allows you to define Genesys Cloud Objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across multiple Genesys Cloud CX organizations</p>
+<p>CX as Code is a configuration tool that allows you to define Genesys Cloud objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across a single or multiple Genesys Cloud CX organizations</p>
 <p><img src="../images/CXasCodeOverview.jpg" alt="CXasCodeOverview"></p>
 <h2 id="heading"></h2>
 <h2 id="cx-as-code-resources">CX as Code Resources</h2>
-<p>CX as Code resources are used to create configuration components using various Input fields as well as data sources (such as division_ID or Queue_Flow_ID)</p>
+<p>CX as Code resources are used to <strong>create</strong> configuration components using inputs (such as the name of a skill), however; some resources have numerous dependencies, or configuration objects that must exist or be created in tandem for the resource to be created</p>
 <blockquote>
-<p>Below is an example of a resource requiring various inputs (name, description) and dependancies (queue_flow_id and whisper_prompt_id)</p>
+<p>Below is an example of a resource with various inputs (name, description) and data source dependencies (queue_flow_id, whisper_prompt_id)</p>
 </blockquote>
 <p><img src="../images/CXResource.PNG" alt="Image"></p>
 <h2 id="cx-as-code-data-sources">CX as Code Data Sources</h2>
-<p>Data Sources are simelar to GET Requests, allowing you to GET refrencable information that exists on the platform to be refrenced within resources by component name as shown below</p>
-<ul>
-<li>In the data source below (see image), we are retrieving the welcome greeting by its name &ldquo;Welcome_Greeting&rdquo;, this can be then refrenced in the previous resource example to populate the whisper prompt for the queue</li>
-</ul>
+<p>Data Sources are similar to GET Requests, allowing you to GET information that already exists on the platform to be referenced within resources by component name as shown below</p>
+<blockquote>
+<p>Below is an example of a data source, we are retrieving the welcome greeting by its name &ldquo;Welcome_Greeting&rdquo;, this can be then referenced in the previous resource example to populate the whisper prompt for the queue</p>
+</blockquote>
 <p><img src="../images/CXDataSource.PNG" alt="Image"></p>
 <h2 id="auth-access-requirements">Auth Access Requirements</h2>
-<p>Within resources you will see a defined list of API access requirements for the auth client you&rsquo;ve constructted which will outline the permissions your auth client requires to execute the sepcific resource you are reviewing</p>
+<p>Within resources on the terraform registry you will see a defined list of API access requirements for the Oauth client you&rsquo;ve constructed which will outline the permissions your Oauth client requires to execute the specific resource you are reviewing</p>
 <p><img src="../images/CXAuthReq.PNG" alt="Image"></p>
 
 
@@ -684,19 +684,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1651770120"></script>
-    <script src="../js/perfect-scrollbar.min.js?1651770120"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1651770120"></script>
-    <script src="../js/jquery.sticky.js?1651770120"></script>
-    <script src="../js/featherlight.min.js?1651770120"></script>
-    <script src="../js/highlight.pack.js?1651770120"></script>
+    <script src="../js/clipboard.min.js?1651846649"></script>
+    <script src="../js/perfect-scrollbar.min.js?1651846649"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1651846649"></script>
+    <script src="../js/jquery.sticky.js?1651846649"></script>
+    <script src="../js/featherlight.min.js?1651846649"></script>
+    <script src="../js/highlight.pack.js?1651846649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1651770120"></script>
-    <script src="../js/learn.js?1651770120"></script>
-    <script src="../js/hugo-learn.js?1651770120"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1651846649"></script>
+    <script src="../js/learn.js?1651846649"></script>
+    <script src="../js/hugo-learn.js?1651846649"></script>
     
         
-            <script src="../mermaid/mermaid.js?1651770120"></script>
+            <script src="../mermaid/mermaid.js?1651846649"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
