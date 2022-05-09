@@ -67,7 +67,7 @@
 	"title": "Genesys CX as Code Workshop",
 	"tags": [],
 	"description": "",
-	"content": "Genesys CX as Code Workshop Introduction The goal of the workshop is to introduce the newest tool to the Genesys Cloud developer ecosystem. In this workshop, we will be configuring and executing resources sourced from the Genesys Github repository.\n"
+	"content": "Genesys CX as Code Workshop Welcome The goal of the workshop is to introduce the newest tool to the Genesys Cloud developer ecosystem. In this workshop, we will be configuring and executing resources sourced from the Genesys Github repository.\n"
 },
 {
 	"uri": "https://genesys-samples.github.io/categories.html",
