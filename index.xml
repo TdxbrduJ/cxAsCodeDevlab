@@ -7,24 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://genesys-samples.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CX As Code</title>
-      <link>https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html</guid>
-      <description>What is CX as Code? CX as Code is a configuration tool that allows you to define Genesys Cloud objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across a single or multiple Genesys Cloud CX organizations
- CX as Code Resources CX as Code resources are used to create configuration components using inputs (such as the name of a skill), however; some resources have numerous dependencies, or configuration objects that must exist or be created in tandem for the resource to be created</description>
-    </item>
-    
-    <item>
-      <title>Gitting Started... haha</title>
+      <title>Gitting Started .. Git it?</title>
       <link>https://genesys-samples.github.io/030-using-cx-as-code/10_gitting-started-haha.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://genesys-samples.github.io/030-using-cx-as-code/10_gitting-started-haha.html</guid>
-      <description>Create a local file repository This is fancy talk for creating a folder locally on your machine that will be used to store code and development projects
- It is best practice to not include spaces in the name of this folder, or files in general while developing
- Open this folder within VSCode You can either right click within this folder and select “Open with code” or navigate to it from VSCode Directly</description>
+      <description>Create a local file repository First Things first, we will be creating a local file repository or &amp;ldquo;repo&amp;rdquo;. This is fancy talk for creating a folder locally on your machine that will be used to store code and development projects. Storing code on your machine allows you to work on and make changes to your project before pushing your changes to a GitHub repository where the pipeline configuration resides.
+ It is best practice to not include spaces in the name of this folder, or files in general while developing.</description>
+    </item>
+    
+    <item>
+      <title>What is CX As Code?</title>
+      <link>https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://genesys-samples.github.io/020-cx-as-code-and-terraform/10_first.html</guid>
+      <description>What is CX as Code? CX as Code is a configuration tool that allows you to define Genesys Cloud objects such as Queues, Skills, Users, etc. in plain text files and then apply that configuration across a single or multiple Genesys Cloud CX organizations.
+Uses for CX as code could be:
+ Provisioning of a Genesys CX organization&amp;rsquo;s initial configurations Deployment of CX infrastructure accross multiple Genesys CX organizations Replication of core CX infrastructure to a Disaster Recovery (DR) Environment   CX as Code Resources CX as Code resources are used to create configuration components using inputs (such as the name of a skill), however; some resources have numerous dependencies, or configuration objects that must exist or be created in tandem for the resource to be created</description>
     </item>
     
     <item>
@@ -33,12 +33,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://genesys-samples.github.io/030-using-cx-as-code/20_buidlingyourcodebase.html</guid>
-      <description>Setting up your file structure Create two files in VS code:
- Variables.tf Main.tf  Copy the code snippit below and paste it into your Variables.tf file. Once copied over you will need to enter your Oauth client ID and secret with the information from the Oauth client you created in the previous step. You will also need to replace the AWS Region (found in the AWS region name column in the linked article) with the AWS region your Genesys Cloud org resides in</description>
+      <description>Setting up your file structure From here, we will be starting from scratch with two terraform scripts and how to get started with terraform. Below you will see two seperate terraform files you will beed to create. Within VS Code, create new folders with the naming convention below:
+Create two files in VS code:
+ Variables.tf Main.tf  Copy the code snippit below and paste it into your Variables.tf file. Once copied over you will need to enter your Oauth client ID and secret with the information from the Oauth client you created in the previous step.</description>
     </item>
     
     <item>
-      <title>Terraform</title>
+      <title>What is Terraform?</title>
       <link>https://genesys-samples.github.io/020-cx-as-code-and-terraform/20_second.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -47,7 +48,7 @@
     </item>
     
     <item>
-      <title>Use Cases</title>
+      <title>Why use CX as Code?</title>
       <link>https://genesys-samples.github.io/020-cx-as-code-and-terraform/30_third.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
