@@ -33,7 +33,7 @@ Uses for CX as code could be:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://genesys-samples.github.io/030-using-cx-as-code/20_buidlingyourcodebase.html</guid>
-      <description>Setting up your file structure From here, we will be starting from scratch with two terraform scripts and how to get started with terraform. Below you will see two seperate terraform files you will need to create. Within VS Code, create new folders with the naming convention below:
+      <description>Setting up your file structure From here, we will be starting from scratch with two terraform scripts and how to get started with terraform. Below you will see two separate terraform files you will need to create. Within VS Code, create new folders with the naming convention below:
 Create two files in VS code:
  Variables.tf Main.tf  Copy the code snippit below and paste it into your Variables.tf file. Once copied over you will need to enter your Oauth client ID and secret with the information from the Oauth client you created in the previous step.</description>
     </item>
